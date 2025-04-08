@@ -1,6 +1,23 @@
 import pygame as pyg
 from constants import *
 
+class CircleShape(pyg.sprite.Sprite):
+    def __init__(self, x, y, radius):
+        if hasattr(self, "containers"):
+            super().__init__(self, containers)
+        else:
+            super().__init__()
+
+        self.position = pyg.Vector2(x, y)
+        self.velocity - pyg.Vector2(0, 0)
+        self.radius = radius
+
+    def draw(self, screen):
+        pass
+
+    def update(self, dt):
+        pass
+
 screen = pyg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 clock = pyg.time.Clock()
 dt = 0
